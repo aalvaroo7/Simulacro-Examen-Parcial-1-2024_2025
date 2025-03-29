@@ -34,10 +34,15 @@ Router#show interfaces gig0/1/0
 GigabitEthernet0/1/0 is up, line protocol is up (connected)
   Hardware is CN Gigabit Ethernet, address is 00d0.bc82.4d6d (bia 00d0.bc82.4d6d)
   MTU 1500 bytes, BW 5000000 Kbit, DLY 10 usec,
+  
   ----------(Resto de las especificaciones)--------------------------
 
 
   Ahora configuraremos lo relativo al Access Point (AP) 
 
 Activaremos en el apartado de configuración el WPA2-PSK Asignaremos en el apartado de configuración una SSID especifica para la red inalámbrica y una contraseña 
-En el laptop que coloquemos pondremos un módulo de red inalámbrica y configuraremos este módulo
+En el laptop que coloquemos pondremos un módulo de red inalámbrica y configuraremos este módulo.
+
+Ahora en los CLI de los routers configuraremos las IP de cada puerto en la pestaña de config, a cada interfaz le asignaremos una ip de la red
+
+A la interfaz serial la asignaremos otra red con sus respectivas ip (192.168.2.0 es la que he definido yo)

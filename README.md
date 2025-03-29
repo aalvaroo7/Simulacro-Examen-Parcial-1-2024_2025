@@ -46,3 +46,5 @@ En el laptop que coloquemos pondremos un módulo de red inalámbrica y configura
 Ahora en los CLI de los routers configuraremos las IP de cada puerto en la pestaña de config, a cada interfaz le asignaremos una ip de la red
 
 A la interfaz serial la asignaremos otra red con sus respectivas ip (192.168.2.0 es la que he definido yo)
+
+

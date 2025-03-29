@@ -25,3 +25,19 @@ exit
 write memory (guarda la configuración del router)
 
 Con esto habremos limitado el ancho de banda a 500Mbps
+
+### si introducimos el comando show interfaces "Nombre de la interfaz" nos mostrara los detalles de esta interfaz 
+
+y podremos observar una línea que muestra lo siguiente 
+
+Router#show interfaces gig0/1/0
+GigabitEthernet0/1/0 is up, line protocol is up (connected)
+  Hardware is CN Gigabit Ethernet, address is 00d0.bc82.4d6d (bia 00d0.bc82.4d6d)
+  MTU 1500 bytes, BW 5000000 Kbit, DLY 10 usec,
+  ----------(Resto de las especificaciones)--------------------------
+
+
+  Ahora configuraremos lo relativo al Access Point (AP) 
+
+Activaremos en el apartado de configuración el WPA2-PSK Asignaremos en el apartado de configuración una SSID especifica para la red inalámbrica y una contraseña 
+En el laptop que coloquemos pondremos un módulo de red inalámbrica y configuraremos este módulo

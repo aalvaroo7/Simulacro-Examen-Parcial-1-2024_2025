@@ -55,20 +55,24 @@ Abre la consola de Router1 en Packet Tracer.
 
 Entra al modo de configuración privilegiado:
 
+
 Plaintext
 
 enable
 Entra al modo de configuración global:
+
 
 Plaintext
 
 configure terminal
 Configura la ruta estática:
 
+
 Plaintext
 
 ip route 192.168.1.0 255.255.255.0 192.168.3.2
 Guarda la configuración:
+
 
 Plaintext
 
@@ -80,20 +84,24 @@ Abre la consola de Router0 en Packet Tracer.
 
 Entra al modo de configuración privilegiado:
 
+
 Plaintext
 
 enable
 Entra al modo de configuración global:
+
 
 Plaintext
 
 configure terminal
 Configura la ruta estática:
 
+
 Plaintext
 
 ip route 192.168.2.0 255.255.255.0 192.168.3.1
 Guarda la configuración:
+
 
 Plaintext
 

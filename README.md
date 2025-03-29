@@ -49,63 +49,91 @@ A la interfaz serial la asignaremos otra red con sus respectivas ip (192.168.2.0
 
 Añadimos las rutas para que se puedan conectar de una red a otra 
 
-Acceder a la Configuración de Router1
+**Configuración de Rutas Estáticas en Routers (Packet Tracer)**
 
-Abre la consola de Router1 en Packet Tracer.
+**Router1:**
 
-Entra al modo de configuración privilegiado:
+1.  **Acceder a la Configuración de Router1:**
 
+    * Abre la consola de `Router1` en Packet Tracer.
+    * Entra al modo de configuración privilegiado:
 
-Plaintext
+        ```plaintext
+        enable
+        ```
 
-enable
-Entra al modo de configuración global:
+    * Entra al modo de configuración global:
 
+        ```plaintext
+        configure terminal
+        ```
 
-Plaintext
+2.  **Configurar la Ruta Estática:**
 
-configure terminal
-Configura la ruta estática:
+    * Asegúrate de que la dirección IP del siguiente salto sea correcta (192.168.3.2).
 
+        ```plaintext
+        ip route 192.168.1.0 255.255.255.0 192.168.3.2
+        ```
 
-Plaintext
+3.  **Guardar la Configuración:**
 
-ip route 192.168.1.0 255.255.255.0 192.168.3.2
-Guarda la configuración:
+    * Guarda la configuración:
 
+        ```plaintext
+        exit
+        write memory
+        ```
 
-Plaintext
+**Router0:**
 
-exit
-write memory
-Acceder a la Configuración de Router0
+1.  **Acceder a la Configuración de Router0:**
 
-Abre la consola de Router0 en Packet Tracer.
+    * Abre la consola de `Router0` en Packet Tracer.
+    * Entra al modo de configuración privilegiado:
 
-Entra al modo de configuración privilegiado:
+        ```plaintext
+        enable
+        ```
 
+    * Entra al modo de configuración global:
 
-Plaintext
+        ```plaintext
+        configure terminal
+        ```
 
-enable
-Entra al modo de configuración global:
+2.  **Configurar la Ruta Estática:**
 
+    * Asegúrate de que la dirección IP del siguiente salto sea correcta (192.168.3.1).
 
-Plaintext
+        ```plaintext
+        ip route 192.168.2.0 255.255.255.0 192.168.3.1
+        ```
 
-configure terminal
-Configura la ruta estática:
+3.  **Guardar la Configuración:**
 
+    * Guarda la configuración:
 
-Plaintext
+        ```plaintext
+        exit
+        write memory
+        ```
 
-ip route 192.168.2.0 255.255.255.0 192.168.3.1
-Guarda la configuración:
+**Verificación:**
 
+* Después de configurar las rutas estáticas, verifica la conectividad haciendo ping desde los laptops a las diferentes redes.
 
-Plaintext
+    * **Desde Laptop-PT (192.168.2.2) a Laptop-PT (192.168.1.2):**
 
-exit
-write memory
+        ```plaintext
+        C:\> ping 192.168.1.2
+        ```
 
+    * **Desde Laptop-PT (192.168.1.2) a Laptop-PT (192.168.2.2):**
+
+        ```plaintext
+        C:\> ping 192.168.2.2
+        ```
+
+    * Si los pings son exitosos, la configuración de las rutas estáticas es correcta y la comunicación entre las redes estará funcionando.
 

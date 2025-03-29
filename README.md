@@ -47,4 +47,57 @@ Ahora en los CLI de los routers configuraremos las IP de cada puerto en la pesta
 
 A la interfaz serial la asignaremos otra red con sus respectivas ip (192.168.2.0 es la que he definido yo)
 
+Añadimos las rutas para que se puedan conectar de una red a otra 
+
+Acceder a la Configuración de Router1
+
+Abre la consola de Router1 en Packet Tracer.
+
+Entra al modo de configuración privilegiado:
+
+Plaintext
+
+enable
+Entra al modo de configuración global:
+
+Plaintext
+
+configure terminal
+Configura la ruta estática:
+
+Plaintext
+
+ip route 192.168.1.0 255.255.255.0 192.168.3.2
+Guarda la configuración:
+
+Plaintext
+
+exit
+write memory
+Acceder a la Configuración de Router0
+
+Abre la consola de Router0 en Packet Tracer.
+
+Entra al modo de configuración privilegiado:
+
+Plaintext
+
+enable
+Entra al modo de configuración global:
+
+Plaintext
+
+configure terminal
+Configura la ruta estática:
+
+Plaintext
+
+ip route 192.168.2.0 255.255.255.0 192.168.3.1
+Guarda la configuración:
+
+Plaintext
+
+exit
+write memory
+
 
